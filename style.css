@@ -1,0 +1,179 @@
+body,
+.navbar-brand,
+.nav-link {
+    font-family: 'Syne', sans-serif !important;
+    color: #262626;
+}
+.home {
+    width: 100px;
+    text-align:center;
+
+
+}
+
+span.logo {
+    border: 1px solid #FF4132;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #FF4132;
+    color: white;
+    font-size: 30px !important;
+    font-weight: 600;
+}
+
+.active {
+    border: 1px solid #FF4132 !important;
+    border-radius: 3px;
+
+
+}
+
+.shadow-box {
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.active a {
+    color: #FF4132;
+}
+
+.nav-item a:hover {
+    color: #FF4132;
+}
+
+.introtext {
+    color: #FF4132;
+}
+
+p {
+    text-align: justify;
+}
+
+img.profile-img {
+    height: 550px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.profile-img-div {
+    padding-left: 100px;
+}
+
+img.content-img {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+
+.btn-color {
+    background-color: #FF4132;
+    color: white;
+}
+
+small {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.featured-head {
+    margin: 0px !important;
+}
+
+h3.top-allign {
+    margin-top: 30px !important;
+}
+
+h4.top-allign {
+    margin-top: 50px !important;
+}
+
+.social {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #262626;
+    size: 24px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+button a {
+    color: white;
+}
+
+li a {
+    color: #262626;
+}
+
+li a:hover {
+    color: #FF4132;
+}
+
+li {
+    list-style: none
+}
+
+ul {
+    padding-left: 0px !important;
+}
+
+.footer-bottom {
+    background-color: #FF4132;
+    color: white !important;
+    ;
+}
+
+.footer-design {
+    background-color: #F1F1F1;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.section-bg {
+    background-color: #F1F1F1;
+    border-radius: 10px;
+}
+
+.image-padding-none {
+    padding-left: 0px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #FF4132 !important;
+    color: white;
+}
+
+.btn:active {
+    background-color: #FF4132 !important;
+    color: white !important;
+    outline: none !important;
+}
+
+.intro > h2 {
+    font-size: 30px;
+}
+.paraone {
+    font-size: 16px;
+    color: #7e7e7e;
+    font-weight: 600;
+}
+.navbar-nav {
+display: flex;
+gap: 10px;
+}
+.featured-workk >h3 {
+    margin-top: 100px;
+    margin-bottom: -20px;
+    font-size: 40px;
+    font-weight: 600;
+}

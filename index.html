@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabi's Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Google Font: Glacial Indifference -->
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const homeSection = document.querySelector('.intro-section');
+    const recentWorkSection = document.querySelector('.recent-work-section');
+    const aboutMeSection = document.getElementById('aboutme');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // About Me click
+    document.querySelector('a[href="#aboutme"]').addEventListener('click', function (event) {
+      event.preventDefault();
+      homeSection.style.display = 'none';
+      recentWorkSection.style.display = 'none';
+      aboutMeSection.style.display = 'block';
+
+      navLinks.forEach(link => link.classList.remove('active-link'));
+      this.classList.add('active-link');
+    });
+
+    // Home click
+    document.querySelector('a[href="index.html"]').addEventListener('click', function (event) {
+      event.preventDefault();
+      homeSection.style.display = 'block';
+      recentWorkSection.style.display = 'block';
+      aboutMeSection.style.display = 'none';
+
+      navLinks.forEach(link => link.classList.remove('active-link'));
+      this.classList.add('active-link');
+    });
+  });
+</script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="page-container d-flex align-items-center justify-content-between">
+    
+    <!-- Logo -->
+    <a class="navbar-brand me-4" href="#">
+  <img src="Common/image/Logo.png" alt="Kabi Logo" height="40" />
+</a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav items -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+        <li class="nav-item">
+          <a class="nav-link active-link" href="index.html">Home</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#work" id="workDropdown" role="button">
+  Work
+  <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M1.5 5.5l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+  </svg>
+</a>
+</a>
+          <ul class="dropdown-menu" aria-labelledby="workDropdown">
+            <li><a class="dropdown-item" href="Common/document/Let'sdriEVWebsiteCase_Study.pdf" target="_blank">Let's driEV Website</a></li>
+            <li><a class="dropdown-item" href="common/document/Let'sdriEVCommunityAppCase_Study.pdf" target="_blank">Let's driEV Community</a></li>
+            <!-- <li><a class="dropdown-item" href="./common/document/letsdriev_crm.pdf" target="_blank">Let's driEV CRM Portal</a></li> -->
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutme">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Common/document/KabiPrasadMallick_UIUXDesigner.pdf" target="_blank">Resume</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- Page Content -->
+  <section class="intro-section" style="margin: 0 200px; padding-top: 120px;">
+
+  <!-- First Heading -->
+  <h1 class="heading1">
+    <span class="dark-text">Hi, I am </span>
+    <span class="highlight-text">Kabi Prasad</span>
+  </h1>
+
+  <!-- Second Heading -->
+  <h1 class="heading2">
+    <span class="stroke-word">I</span>
+    <span class="stroke-word">design,</span>
+    <span class="stroke-word">create</span>
+    <span class="stroke-word">&amp;</span>
+    <span class="stroke-word">innovate.</span>
+  </h1>
+
+  <!-- Paragraph -->
+  <p class="intro-paragraph">
+    I’m a UI/UX & Product designer based in Bengaluru, India with experience in delivering end-to-end UX/UI design for software products.
+    I’m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.
+  </p>
+  
+</section>
+
+<!-- My Recent Work Section -->
+<section class="recent-work-section">
+  <div class="custom-container">
+    <h2 class="section-heading">MY RECENT WORK</h2>
+
+    <!-- Work 1 -->
+    <a href="Common/document/Let'sdriEVWebsiteCase_Study.pdf" target="_blank" class="work-link">
+      <div class="work-item position-relative">
+  <img src="Common/image/Website_Image.png" class="work-image" alt="Work Sample" />
+  <div class="work-text-overlay text-left">
+    <p class="project-title">
+      <span class="title-main">Let’s driEV</span>
+      <span class="title-sub">(Website)</span>
+    </p>
+    <p class="project-subtitle">Reimagining Let's driEV — a seamless journey <br>
+from booking to resolution.</p>
+  </div>
+</div>
+    </a>
+
+    <!-- Work 2 -->
+    <a href="Common/document/Let'sdriEVCommunityAppCase_Study.pdf" target="_blank" class="work-link">
+      <div class="work-item position-relative">
+  <img src="Common/image/Community_App.png" class="work-image" alt="Work Sample" />
+  <div class="work-text-overlay text-left">
+    <p class="project-title">
+      <span class="title-main">Let’s driEV</span>
+      <span class="title-sub">(Community App)</span>
+    </p>
+    <p class="project-subtitle">Shaping every detail — where thoughtful UI turns<br>
+ideas into shared experiences.</p>
+  </div>
+</div>
+    </a>
+
+  </div>
+</section>
+<section id="aboutme" class="content-section" style="display:none; margin: 0 200px; padding-top: 120px;">
+  <h2>The Story Behind the Screens</h2>
+  <h4>I’m Kabi Prasad Mallick, a designer fueled by purpose and passion. I believe design has the power to improve lives — and that belief drives everything I create.
+Each day, I immerse myself in learning something new, staying curious and open to fresh perspectives. 
+I thrive on collaboration and love connecting with bold thinkers who aren't afraid to share their ideas with the world.
+Over time, I’ve built a strong foundation in UX/UI and product design through hands-on experience, 
+in-depth workshops, and self-driven learning. I see the bigger picture and enjoy shaping products end-to-end — from the first spark of an idea to the final stages of development.</h4>
+  <img src="Common/image/Profile_image.png" alt="Kabi Prasad Mallick" />
+    <!-- My Values Section -->
+  <div class="values-section">
+    <div class="values-container">
+      <h2 class="values-heading">My Values</h2>
+
+      <!-- Value 1 -->
+      <div class="value-item">
+        <i class="bi bi-fire value-icon"></i>
+        <div>
+          <h5 class="value-title">Passion is Everything</h5>
+          <p class="value-description">If something doesn’t spark your soul — change it. Life’s too short to stay stuck. 
+            I believe in channeling energy into work that feels meaningful, creative, and alive. 
+            I’m grateful to be surrounded by people who are driven, curious, and not afraid to dream big. 
+            Through design, I want my work to make people feel something — to connect, reflect, and move forward with purpose.</p>
+        </div>
+      </div>
+
+      <!-- Value 2 -->
+      <div class="value-item">
+        <i class="bi bi-lightbulb value-icon"></i>
+        <div>
+          <h5 class="value-title">Always Be Learning</h5>
+          <p class="value-description">I believe growth comes from staying curious and open. Every project, conversation, or challenge 
+            is an opportunity to learn something new — whether it's a fresh design approach, a deeper user insight, or a better way to collaborate. 
+            I’m constantly exploring new tools, trends, and perspectives to sharpen my craft and expand my thinking. For me, 
+            learning isn’t just a phase — it’s a mindset that fuels everything I do.</p>
+        </div>
+      </div>
+
+      <!-- Value 3 -->
+      <div class="value-item">
+        <i class="bi bi-brush value-icon"></i>
+        <div>
+          <h5 class="value-title">Embrace Your Creativity</h5>
+          <p class="value-description">Creativity isn’t just about making things look good — it’s about solving problems 
+            in ways that feel fresh, human, and impactful. I believe in giving ideas the freedom to grow, even the messy ones, 
+            because that’s where the magic often begins. Whether I’m sketching wireframes or refining final designs, I always 
+            try to approach each challenge with curiosity, intention, and an open mind. Creativity, to me, is less about perfection and more about exploration.</p>
+        </div>
+      </div>
+
+      <!-- Value 4 -->
+      <div class="value-item">
+        <i class="bi bi-heart value-icon"></i>
+        <div>
+          <h5 class="value-title">Stay Humble</h5>
+          <p class="value-description">It doesn’t matter if you’re a CEO, a junior designer, or someone still figuring things out — everyone deserves respect. 
+            We’re all navigating our own challenges, trying to grow, and looking for meaning in our own way. 
+            I believe in treating people with kindness, staying grounded no matter where I go, and never losing sight of who I am. 
+            Titles fade, but how you treat others stays with you. Stay real, stay respectful.</p>
+        </div>
+      </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="custom-container text-center">
+    <h2 class="footer-heading">Let's Connect</h2>
+    <p class="footer-subheading">
+      Have an idea, a role, or just want to chat? Let’s connect.
+    </p>
+
+    <!-- Social Icons -->
+    <div class="footer-icons d-flex justify-content-center gap-4 mt-4 mb-3">
+      <a href="https://www.linkedin.com/in/kabi-prasad-mallick-365472107/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <img src="Common/image/LinkedIN.svg" alt="LinkedIn" class="footer-icon" />
+      </a>
+      <a href="mailto:kabimallick1996@gmail.com">
+        <img src="Common/image/Email.svg" alt="Email" class="footer-icon" />
+      </a>
+      <a href="https://www.behance.net/kabiprmallick" target="_blank">
+        <img src="Common/image/Behance.svg" alt="Behance" class="footer-icon" />
+      </a>
+      <a href="https://wa.me/918908259927" target="_blank">
+        <img src="Common/image/Whatsapp.svg" alt="WhatsApp" class="footer-icon" />
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <p class="footer-contact">kabimallick1996@gmail.com</p>
+    <p class="footer-contact">(+91) 8908259927</p>
+  </div>
+</footer>
+
+<!-- Copyright -->
+<div class="footer-copyright">
+  &copy; 2025 Kabi Prasad Mallick. All rights reserved.
+</div>
+
+
+
+
+
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

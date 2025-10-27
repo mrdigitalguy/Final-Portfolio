@@ -207,6 +207,10 @@ body {
 .work-link:hover .work-image {
   transform: scale(1.05);
 }
+.work-item:hover .work-image {
+  transform: scale(1.05);
+}
+
 .work-item {
   position: relative;
   overflow: hidden;
@@ -377,6 +381,8 @@ body {
   margin-top: 10px;
 
 }
+
+
 
 
 

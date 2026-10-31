@@ -23,7 +23,16 @@ const SITE = {
   const page = document.body.dataset.page || 'home';
   const onHome = page === 'home';
   const onWork = page === 'work' || page === 'case';     // case studies live under Work
-  const homeHref = onHome ? '#home' : 'index.html';
+  // Home link: the clean site root online (kabiprasad.in/), index.html when opened as a local file
+  const online = location.protocol.startsWith('http');
+  const homeHref = online ? '/' : 'index.html';
+
+  // keep the address bar clean: kabiprasad.in/index.html#home → kabiprasad.in/
+  if (online) {
+    let path = location.pathname.replace(/index\.html$/, '');
+    let hash = location.hash === '#home' ? '' : location.hash;
+    if (path + hash !== location.pathname + location.hash) history.replaceState(null, '', path + location.search + hash);
+  }
   const workCurrent = onWork ? ' class="is-current" aria-current="page"' : '';
 
   const header = `
@@ -111,4 +120,17 @@ const SITE = {
     const html = parts[slot.dataset.include];
     if (html) slot.outerHTML = html;
   });
+
+  // any other link written as index.html (e.g. "← Home" on the Work page) also goes to the clean root online
+  if (online) {
+    document.querySelectorAll('a[href="index.html"]').forEach((a) => a.setAttribute('href', '/'));
+  }
+
+  // on the home page, the logo / "Home" just scroll back to the top (no reload, no #home in the URL)
+  if (onHome) {
+    document.querySelectorAll(`a[href="${homeHref}"]`).forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }));
+  }
 })();

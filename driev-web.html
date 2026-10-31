@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let’s driEV website case study — Kabi Prasad</title>
+  <meta name="description" content="How an EV scooter rental company got a mobile-first booking website — a product design case study by Kabi Prasad Mallick." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=1031" />
+</head>
+<body class="glass theme-driev" data-page="case">   <!-- "glass" = frosted-glass cards across the page. Remove the class to switch it off. -->
+
+  <!--
+    ================================================================
+    HOW TO EDIT
+    - Every section is wrapped in  SECTION: NAME  START / END comments.
+    - To remove a section: delete everything between its START and END,
+      OR add its data-section name to HIDDEN_SECTIONS in script.js.
+    - Lines marked  EDIT:  need your real link / file / text.
+    ================================================================
+  -->
+
+  <!-- Header + menu: shared, edit them in partials.js -->
+  <div data-include="header"></div>
+
+
+  <!-- reading progress line under the header -->
+  <div class="read-progress" aria-hidden="true"><span id="readBar"></span></div>
+
+  <main class="cs">
+
+    <!-- ===================== SECTION: CASE HERO START ===================== -->
+    <section class="cs-hero" data-section="cs-hero">
+      <div class="container">
+        <a href="work.html" class="back-link reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          All work
+        </a>
+
+        <div class="cs-hero__grid">
+          <div>
+            <span class="eyebrow eyebrow--accent reveal">Let’s driEV · Website · Rental model</span>
+            <h1 class="cs-hero__title reveal">A booking site that answers the <span class="accent">next question</span> first.</h1>
+            <p class="cs-hero__lead reveal">
+              How an EV scooter rental company with no web presence got a mobile-first website for anyone to find,
+              understand and book — without going through WhatsApp.
+            </p>
+          </div>
+
+          <!-- Concept illustration: the four-step booking flow (active step cycles) -->
+          <div class="concept reveal" aria-hidden="true">
+            <span class="eyebrow">Concept · the four-step booking flow</span>
+            <ol class="concept__steps" data-cycle>
+              <li class="is-active"><span>1</span>Choose a plan</li>
+              <li><span>2</span>Pick a date</li>
+              <li><span>3</span>Pick-up or delivery</li>
+              <li><span>4</span>Confirm</li>
+            </ol>
+          </div>
+        </div>
+
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>Solo Product Designer</dd></div>
+          <div><dt>Scope</dt><dd>Research, UX, UI and every page</dd></div>
+          <div><dt>Platform</dt><dd>Web, desktop and mobile. Mobile first.</dd></div>
+          <div><dt>Audience</dt><dd>The general public, anywhere</dd></div>
+          <div><dt>Tools</dt><dd>Figma, FigJam, Illustrator</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- EDIT: cover image — replace assets/driEV-web/driev-website-thumbnail.png (2080 × 1040 px) to change it -->
+    <section class="cs-block cs-block--tight" data-section="cs-cover">
+      <div class="container">
+        <div class="cs-cover reveal"><img src="assets/driEV-web/driev-website-thumbnail.png" alt="Let’s driEV booking website on desktop and mobile" /></div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CASE HERO END ===================== -->
+
+
+    <!-- ===================== SECTION: CONTEXT START ===================== -->
+    <section class="cs-block" data-section="cs-context">
+      <div class="container">
+        <span class="eyebrow reveal">Product context</span>
+        <h2 class="section__title section__title--with-sub reveal">This site sells the rental model, not the campus one</h2>
+        <p class="section__sub reveal">driEV runs two business models. The website serves the public Rental model, with fixed plans. The campus Community model lives in a separate native app with its own pricing — covered in the <a href="driev-app.html" class="text-link">app case study</a>. I designed the website in parallel with that app.</p>
+
+        <div class="model-table reveal">
+          <div class="model-table__row model-table__head"><span></span><span>Rental model · this case study</span><span>Community model · mobile app</span></div>
+          <div class="model-table__row"><span>Who can use it</span><span>Anyone, anywhere</span><span>University students, teachers and staff</span></div>
+          <div class="model-table__row"><span>Product</span><span>Website, desktop and mobile</span><span>Native mobile app</span></div>
+          <div class="model-table__row"><span>Pricing</span><span>Fixed price per plan: daily, weekly, monthly or yearly</span><span>Per minute plus per kilometre. No long plans.</span></div>
+          <div class="model-table__row"><span>Booking</span><span>Choose a plan, pick a date, pick-up or delivery, then confirm</span><span>Time-slot based, with pre-book</span></div>
+          <div class="model-table__row"><span>Pickup &amp; return</span><span>Pickup from a warehouse, or home delivery</span><span>Campus station hub, returned to the same station</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CONTEXT END ===================== -->
+
+
+    <!-- ===================== SECTION: PROBLEM + RESEARCH START ===================== -->
+    <section class="cs-block" data-section="cs-problem">
+      <div class="container cs-split">
+        <div>
+          <span class="eyebrow reveal">The problem</span>
+          <h2 class="section__title reveal">Customers couldn’t find driEV, price it or book it</h2>
+          <p class="cs-prose reveal">The company had a public rental model with daily, weekly, monthly and yearly plans, but no web presence. Everything went through WhatsApp.</p>
+        </div>
+        <ul class="rows rows--plain reveal">
+          <li>No searchable presence</li>
+          <li>No pricing page and no trust signals</li>
+          <li>Booking required a WhatsApp conversation</li>
+          <li>Prospects dropped off before completing a booking</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <span class="eyebrow cs-gap reveal">Research</span>
+        <p class="section__sub reveal">I drew on interviews from the community app and benchmarked Indian EV and vehicle rental sites. Three points kept people from booking.</p>
+        <div class="cards-3">
+          <div class="flow__step reveal"><span class="eyebrow">Drop-off 1</span><b>Unclear pricing</b></div>
+          <div class="flow__step reveal"><span class="eyebrow">Drop-off 2</span><b>Unclear booking process</b></div>
+          <div class="flow__step reveal"><span class="eyebrow">Drop-off 3</span><b>Unclear steps after payment</b></div>
+        </div>
+        <p class="section__sub cs-gap-sm reveal">Two more things shaped the design. Visitors worried about running out of charge, which is specific to EVs. And most would find driEV on their phone — through Instagram, WhatsApp or Google — so mobile came first.</p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: PROBLEM + RESEARCH END ===================== -->
+
+
+    <!-- ===================== SECTION: PRINCIPLE + SITE MAP START ===================== -->
+    <section class="cs-block" data-section="cs-principle">
+      <div class="container">
+        <span class="eyebrow eyebrow--accent reveal">Design principle</span>
+        <h2 class="section__title section__title--with-sub reveal">Answer the next question before the user has to ask it</h2>
+        <p class="section__sub reveal">The aim was to make booking the only logical next step. I mapped the pages before designing any screen.</p>
+        <span class="eyebrow reveal">Site map</span>
+        <div class="loop loop--map reveal">
+          <span class="is-key">Homepage</span><span>Pricing</span><span>Vehicles</span><span>How it works</span><span>FAQs</span><span>Contact</span><span class="is-goal">Booking</span>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: PRINCIPLE + SITE MAP END ===================== -->
+
+
+    <!-- ===================== SECTION: PAGES START ===================== -->
+    <section class="cs-block" data-section="cs-pages">
+      <div class="container">
+        <span class="eyebrow reveal">Pages designed</span>
+        <h2 class="section__title reveal">Six pages, each answering one set of questions</h2>
+        <div class="learned learned--three">
+          <div class="learned__item reveal"><b>Homepage</b><p>A hero with a single call to action, plan availability, a how-it-works strip, vehicle highlights and trust signals.</p></div>
+          <div class="learned__item reveal"><b>Pricing</b><p>Four plan cards showing included kilometres, price and coverage.</p></div>
+          <div class="learned__item reveal"><b>Vehicle</b><p>Specs, battery range, features and photos for each scooter model.</p></div>
+          <div class="learned__item reveal"><b>Booking flow</b><p>Plan, delivery preference, date, contact details and confirmation.</p></div>
+          <div class="learned__item reveal"><b>How it works &amp; FAQs</b><p>The step-by-step process, plus answers on range, documents, breakdown support and extensions.</p></div>
+          <div class="learned__item reveal"><b>Contact</b><p>A form, the address and operating hours.</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: PAGES END ===================== -->
+
+
+    <!-- ===================== SECTION: DECISIONS + PLANS START ===================== -->
+    <section class="cs-block" data-section="cs-decisions">
+      <div class="container">
+        <span class="eyebrow reveal">Key design decisions</span>
+        <h2 class="section__title reveal">Three choices that shaped the site</h2>
+        <div class="cards-3">
+          <div class="flow__step reveal"><b>Pricing on the homepage</b><p>Pricing sits on the homepage, not behind a quote form. Plan cards are built to scan in about five seconds.</p></div>
+          <div class="flow__step reveal"><b>Four steps, not eight to twelve</b><p>Competitors used eight to twelve steps. Here, documents are submitted later, so the first booking stays short.</p></div>
+          <div class="flow__step reveal"><b>Mobile first</b><p>Designed on a 390px frame, then scaled up to desktop. On mobile, a sticky “Book now” bar stays within reach.</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: DECISIONS + PLANS END ===================== -->
+
+
+    <!-- ===================== SECTION: BOOKING FLOW + SCREENS START =====================
+         Website screens: 12 desktop screens, artboard 1440 × 1024 px, in assets/driEV-web/screens/01–12.png
+         EDIT: to swap a screen, replace its file with the same name.
+    -->
+    <section class="cs-block" data-section="cs-booking">
+      <div class="container">
+        <span class="eyebrow reveal">The booking flow</span>
+        <h2 class="section__title reveal">Four steps, designed to finish in under two minutes on mobile</h2>
+
+        <ol class="flow flow--4">
+          <li class="flow__step reveal"><span>01</span><b>Plan</b><p>Choose daily, weekly, monthly or yearly.</p></li>
+          <li class="flow__step reveal"><span>02</span><b>Date</b><p>Pick the start date and add contact details.</p></li>
+          <li class="flow__step reveal"><span>03</span><b>Pick-up</b><p>Collect from the warehouse or get home delivery.</p></li>
+          <li class="flow__step reveal"><span>04</span><b>Confirm</b><p>Review and confirm. Documents come later.</p></li>
+        </ol>
+
+        <h3 class="cs-subhead reveal">Website screens</h3>
+        <div class="screens screens--site">
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/01.png" alt="Homepage with the booking search bar and recommended plan cards" loading="lazy" /></div><figcaption><b>Home &amp; recommended plans</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/02.png" alt="Blog cards and the site footer with quick links and newsletter sign-up" loading="lazy" /></div><figcaption><b>Blogs &amp; footer</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/03.png" alt="Onboarding form with avatar, name, contact and occupation details" loading="lazy" /></div><figcaption><b>Sign-up details</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/04.png" alt="Pricing page comparing City+, Speed, Speed+ and Luxe plans" loading="lazy" /></div><figcaption><b>Pricing plans</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/05.png" alt="Community page listing campus stations with CO2 saved and rides" loading="lazy" /></div><figcaption><b>Community stations</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/06.png" alt="Available vehicles for the chosen rental type, duration and date" loading="lazy" /></div><figcaption><b>Search results</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/07.png" alt="Vehicle details with home delivery or self-pickup and add-ons" loading="lazy" /></div><figcaption><b>Vehicle &amp; delivery</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/08.png" alt="Bookings list with active, upcoming, completed and cancelled tabs" loading="lazy" /></div><figcaption><b>My bookings</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/09.png" alt="Personal details and verified KYC documents" loading="lazy" /></div><figcaption><b>Profile &amp; KYC</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/10.png" alt="Dialog warning about unsaved profile changes" loading="lazy" /></div><figcaption><b>Unsaved changes</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/11.png" alt="Support tickets grouped by pending, resolved and in progress" loading="lazy" /></div><figcaption><b>Ticket status</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-web/screens/12.png" alt="Form to raise a support issue against a booking" loading="lazy" /></div><figcaption><b>Raise an issue</b></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: BOOKING FLOW + SCREENS END ===================== -->
+
+
+    <!-- ===================== SECTION: OUTCOME START ===================== -->
+    <section class="cs-block" data-section="cs-outcome">
+      <div class="container">
+        <span class="eyebrow reveal">Outcome</span>
+        <h2 class="section__title section__title--with-sub reveal">driEV became discoverable, and bookings became traceable</h2>
+        <p class="section__sub reveal">The site didn’t have analytics in place while I worked on it, so I’m sharing what launched rather than estimates.</p>
+
+        <div class="stats">
+          <div class="stat reveal"><b>0</b><span>WhatsApp bookings needed after launch</span></div>
+          <div class="stat reveal"><b>4</b><span>Rental plans live on the site</span></div>
+          <div class="stat reveal"><b>&lt;2 min</b><span>Target booking time on mobile</span></div>
+        </div>
+
+        <div class="compare compare--single">
+          <div class="compare__card reveal">
+            <span class="eyebrow">What launched</span>
+            <ul>
+              <li>The business can now be found online</li>
+              <li>WhatsApp is out of the conversion path</li>
+              <li>Bookings are recorded in a system and can be traced</li>
+              <li>The website and the community app share one brand</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: OUTCOME END ===================== -->
+
+
+    <!-- ===================== SECTION: LEARNINGS START ===================== -->
+    <section class="cs-block" data-section="cs-learned">
+      <div class="container">
+        <span class="eyebrow eyebrow--accent reveal">What I learned</span>
+        <p class="closing closing--first reveal">Trust comes from clear answers, not more pages.</p>
+        <p class="section__sub reveal">Price, process and what happens after payment were the three doubts that stopped bookings. Putting each in plain view, and keeping the flow short, did more than any visual flourish. The community app’s interviews fed straight into this site.</p>
+
+        <!-- Next case study -->
+        <a href="magica.html" class="next-case reveal">
+          <span class="eyebrow">Next case study</span>
+          <span class="next-case__title">Magica.AI — Simplifying an AI-native product into a conversation</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </section>
+    <!-- ===================== SECTION: LEARNINGS END ===================== -->
+
+  </main>
+
+
+  <!-- Footer / contact: shared, edit it in partials.js -->
+  <div data-include="footer"></div>
+
+  <script src="partials.js?v=1031"></script>
+  <script src="script.js?v=1031"></script>
+</body>
+</html>

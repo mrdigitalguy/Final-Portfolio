@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabi Prasad — Product Designer</title>
+  <meta name="description" content="Kabi Prasad Mallick — Product Designer building products since 2021." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=1031" />
+</head>
+<body class="glass" data-page="home">   <!-- "glass" = frosted-glass cards across the page. Remove the class to switch it off. -->
+
+  <!--
+    ================================================================
+    HOW TO EDIT
+    - Every section is wrapped in  SECTION: NAME  START / END comments.
+    - To remove a section: delete everything between its START and END,
+      OR add its data-section name to HIDDEN_SECTIONS in script.js.
+    - Lines marked  EDIT:  need your real link / file / text.
+    ================================================================
+  -->
+
+  <!-- Header + menu: shared, edit them in partials.js -->
+  <div data-include="header"></div>
+
+
+  <main>
+
+    <!-- ===================== SECTION: HERO START ===================== -->
+    <section class="hero" id="home" data-section="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            <span class="line"><span>Building</span></span>
+            <span class="line"><span>products since</span></span>
+            <span class="line"><span>2021.</span></span>
+          </h1>
+          <p class="hero__hi reveal">Hi, I am Kabi Prasad<br />Product Designer at Magica.ai</p>
+          <p class="hero__bio reveal">
+            Over 4+ years in product design, I’ve learned that great products aren’t about
+            adding more—they’re about understanding the problem, simplifying the experience,
+            and designing with purpose.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="work.html" class="btn btn--solid">
+              View works
+              <svg class="btn__arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+            </a>
+            <!-- Resume file: assets/Resume/Kabi-Prasad-Product-Designer.pdf (also set in partials.js) -->
+            <a href="assets/Resume/Kabi-Prasad-Product-Designer.pdf" class="btn btn--ghost" download>Download resume</a>
+          </div>
+        </div>
+        <!-- EDIT: hero image — size 500 × 584 px (export at 2x = 1000 × 1168 px for sharp screens).
+             Replace assets/profile-bw.png with your image (same name), or change the src below. -->
+        <div class="hero__media">
+          <div class="hero__photo hero__photo--grid">   <!-- remove "hero__photo--grid" to turn off the grid background -->
+            <img src="assets/Profile/profile-bw-hero.png" alt="Portrait of Kabi Prasad" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: HERO END ===================== -->
+
+
+    <!-- ===================== SECTION: CAREER + SKILLS START ===================== -->
+    <section class="section" id="career" data-section="career">
+      <div class="container split">
+        <div>
+          <h2 class="section__title reveal">Career so far</h2>
+          <div class="career__text reveal">
+            <p>From UI/UX to product thinking, my journey has been driven by curiosity, problem-solving, and creating meaningful user experiences.</p>
+            <p>With 4+ years of experience, I’ve designed and shipped digital products across web and mobile — from EV mobility platforms to AI-powered products, building experiences that balance user needs, business goals, and technical constraints.</p>
+            <p>Currently working in an AI-focused startup, I work across product design, design systems, and end-to-end experiences — turning complex workflows into simple, intuitive, and scalable products.</p>
+          </div>
+        </div>
+
+        <div id="skills" data-section="skills">
+          <h2 class="section__title reveal">Skills</h2>
+          <!-- Add/remove <span> chips freely -->
+          <div class="chips reveal">
+            <span>AI-native UX</span><span>Product Design</span><span>UX Research</span>
+            <span>User Flow</span><span>Design System</span><span>Wireframes</span>
+            <span>Information Architecture</span><span>UI Design</span>
+            <span>Prototyping</span><span>Branding</span><span>Micro-animation</span>
+            <span>Illustrations</span><span>Dev-handoff</span><span>Team Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CAREER + SKILLS END ===================== -->
+
+
+    <!-- ===================== SECTION: HOW I WORK START ===================== -->
+    <section class="section" id="process" data-section="process">
+      <div class="container">
+        <h2 class="section__title reveal">How I work</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h4" /></svg>
+            </span>
+            <h3 class="card__title">Understanding the brief</h3>
+            <p class="card__text">Every project starts with a clear brief. I make sure I understand the client’s goals, user needs, constraints and brand guidelines before I begin designing.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m20 20-4.5-4.5" /></svg>
+            </span>
+            <h3 class="card__title">Research and brainstorming</h3>
+            <p class="card__text">Research and brainstorming shape my design direction. They help me understand the target audience, market trends and competitors, and explore different ideas.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 9M20 4v5h-5M20 12a8 8 0 0 1-13.7 5.6L4 15M4 20v-5h5" /></svg>
+            </span>
+            <h3 class="card__title">Design and iterations</h3>
+            <p class="card__text">I create early concepts, gather feedback and keep refining them. This helps the final design stay simple, user-friendly and effective.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14" /></svg>
+            </span>
+            <h3 class="card__title">Dev hand-off and testing</h3>
+            <p class="card__text">I share clear design specifications with developers and review the build closely, testing it to make sure the final experience works smoothly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: HOW I WORK END ===================== -->
+
+
+    <!-- ===================== SECTION: WORK GLIMPSE START =====================
+         A teaser: three screenshots peek up from behind a fade, with one Explore button.
+         The whole frame opens the Work page.
+         EDIT: swap the three <img> src files to change what peeks out.
+    -->
+    <section class="section" id="casestudies" data-section="casestudies">
+      <div class="container">
+        <h2 class="section__title reveal">Selected work</h2>
+
+        <a href="work.html" class="peek reveal" aria-label="Explore work">
+          <span class="peek__cards" aria-hidden="true">
+            <span class="peek__card peek__card--l"><img src="assets/driEV-web/driev-website-thumbnail-short.png" alt="" /></span>
+            <span class="peek__card peek__card--m"><img src="assets/Magica/Magica-thumbnail-short.png" alt="" /></span>
+            <span class="peek__card peek__card--r"><img src="assets/driEV-app/driev-app-thumbnail-short.png" alt="" style="object-position: 85% center" /></span>
+          </span>
+          <span class="peek__cta">
+            <span class="btn btn--solid">Explore work
+              <svg class="btn__arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+            </span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <!-- ===================== SECTION: WORK GLIMPSE END ===================== -->
+
+
+    <!-- ===================== SECTION: FEEDBACK START =====================
+         Real feedback, quoted word for word. Copy one <article class="quote"> per person.
+         Works with any number of cards — script.js repeats them so the loop never shows a gap.
+    -->
+    <section class="section" id="feedback" data-section="feedback">
+      <div class="container">
+        <h2 class="section__title reveal">Feedback from people<br />I’ve worked with</h2>
+
+        <!-- Auto-scrolls in a loop; hover the cards to pause. -->
+        <div class="quotes reveal" id="quotes">
+          <div class="quotes__track" id="quotesTrack">
+          <article class="quote">
+            <span class="quote__tag"><i></i>Ownership</span>
+            <p class="quote__text">“Kabi is a versatile dept starter with high ownership. Apart from his core strengths, he is extremely capable of solving business problems that pop up without being prodded.”</p>
+            <div class="quote__by">
+              <span class="avatar">A</span>
+              <div><strong>Anirban</strong><small>Co-founder · Let’s driEV</small></div>
+            </div>
+          </article>
+          <article class="quote">
+            <span class="quote__tag"><i></i>Collaboration</span>
+            <p class="quote__text">“During my 3 years of working with Mr. Kabi Prasad, it was a wonderful experience. Always approachable, helpful, and willing to listen, he was an amazing partner to collaborate with across departments.”</p>
+            <div class="quote__by">
+              <span class="avatar">DP</span>
+              <div><strong>Debajit Pattnaik</strong><small>Restaurateur</small></div>
+            </div>
+          </article>
+          <article class="quote">
+            <span class="quote__tag"><i></i>Product sense</span>
+            <p class="quote__text">“I had a great experience working with Kabi. He has a strong understanding of user flows and knows how to translate ideas into intuitive, user-friendly designs. His ability to turn concepts into practical, visually appealing product interfaces makes him a valuable asset to any product team.”</p>
+            <div class="quote__by">
+              <span class="avatar">JK</span>
+              <div><strong>Jaya K.</strong><small>Software Product Manager</small></div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: FEEDBACK END ===================== -->
+
+  </main>
+
+
+  <!-- Footer / contact: shared, edit it in partials.js -->
+  <div data-include="footer"></div>
+
+  <script src="partials.js?v=1031"></script>
+  <script src="script.js?v=1031"></script>
+</body>
+</html>

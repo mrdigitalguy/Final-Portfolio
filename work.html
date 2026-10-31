@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Kabi Prasad</title>
+  <meta name="description" content="Case studies, interaction work and photography by Kabi Prasad Mallick, Product Designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=1031" />
+</head>
+<body class="glass" data-page="work">   <!-- "glass" = frosted-glass cards across the page. Remove the class to switch it off. -->
+
+  <!--
+    ================================================================
+    HOW TO EDIT
+    - Every section is wrapped in  SECTION: NAME  START / END comments.
+    - To remove a section: delete everything between its START and END,
+      OR add its data-section name to HIDDEN_SECTIONS in script.js.
+    - Lines marked  EDIT:  need your real link / file / text.
+    ================================================================
+  -->
+
+  <!-- Header + menu: shared, edit them in partials.js -->
+  <div data-include="header"></div>
+
+
+
+
+  <main>
+
+    <!-- ===================== SECTION: WORK INTRO START ===================== -->
+    <section class="page-head" data-section="work-intro">
+      <div class="container">
+        <a href="index.html" class="back-link reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          Home
+        </a>
+        <h1 class="page-head__title reveal">Work</h1>
+        <p class="page-head__sub reveal">
+          Case studies, interaction experiments and the things I shoot when I’m away from Figma —
+          everything I’ve designed and made since 2021.
+        </p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: WORK INTRO END ===================== -->
+
+
+    <!-- ===================== SECTION: WORK TABS START =====================
+         Tabs switch the panels below. Each tab's data-tab must match a panel's id.
+         Link straight to a tab with work.html#interaction, work.html#photography, etc.
+    -->
+    <section class="section work" id="work" data-section="work">
+      <div class="container">
+
+        <div class="tabs reveal" role="tablist" aria-label="Work categories">
+          <span class="tabs__pill" aria-hidden="true"></span>
+          <button class="tabs__btn is-active" role="tab" aria-selected="true" aria-controls="case-studies" data-tab="case-studies">
+            Case studies <span class="tabs__count">3</span>
+          </button>
+          <button class="tabs__btn" role="tab" aria-selected="false" aria-controls="interaction" data-tab="interaction">
+            Interaction <span class="tabs__count">3</span>
+          </button>
+          <button class="tabs__btn" role="tab" aria-selected="false" aria-controls="visual" data-tab="visual">
+            Visual design <span class="tabs__count">6</span>
+          </button>
+          <button class="tabs__btn" role="tab" aria-selected="false" aria-controls="photography" data-tab="photography">
+            Photography <span class="tabs__count tabs__count--soon">Soon</span>
+          </button>
+        </div>
+
+
+        <!-- ---------- TAB: CASE STUDIES (default) ---------- -->
+        <div class="tab-panel is-active" id="case-studies" role="tabpanel">
+
+          <!-- Opens the Magica case study page -->
+          <a href="magica.html" class="study reveal" id="magica">
+            <div class="study__media"><img src="assets/Magica/Magica-thumbnail.png" alt="Magica.AI app screens" /></div>
+            <div class="study__body">
+              <div class="study__info">
+                <span class="study__tag">01 · Magica.AI — AI Super-agent</span>
+                <h2 class="study__title">Simplifying an AI-native product into a conversation</h2>
+                <p class="study__text">Turning a model-heavy interface into a conversation-first product, backed by a mobile-first design system.</p>
+              </div>
+              <dl class="study__meta">
+                <div><dt>Role</dt><dd>Product Designer</dd></div>
+                <div><dt>Year</dt><dd>2025 - Now</dd></div>
+                <div><dt>Scope</dt><dd>UX · UI · Design System</dd></div>
+              </dl>
+              <span class="study__cta">Read case study
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- EDIT: href → the Let's driEV app case study page -->
+          <a href="driev-app.html" class="study reveal" id="driev-app">
+            <div class="study__media"><img src="assets/driEV-app/driev-app.png" alt="Let’s driEV community app screens" /></div>
+            <div class="study__body">
+              <div class="study__info">
+                <span class="study__tag">02 · Let’s driEV — EV Mobility App</span>
+                <h2 class="study__title">Giving students confidence in every ride</h2>
+                <p class="study__text">From a WhatsApp-run rental service to a campus app students actually use — booking, rides and support in one place.</p>
+              </div>
+              <dl class="study__meta">
+                <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+                <div><dt>Year</dt><dd>2022 - 2025</dd></div>
+                <div><dt>Scope</dt><dd>Research · UX · UI</dd></div>
+              </dl>
+              <span class="study__cta">Read case study
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- EDIT: using the driEV app image for now. When the website screenshot is ready
+               (2080 × 1040 px), save it as assets/driEV-web/driev-web.png and change the src below. -->
+          <a href="driev-web.html" class="study reveal" id="driev-web">
+            <div class="study__media"><img src="assets/driEV-web/driev-website-thumbnail.png" alt="Let’s driEV website" /></div>
+            <div class="study__body">
+              <div class="study__info">
+                <span class="study__tag">03 · Let’s driEV — Booking Website</span>
+                <h2 class="study__title">A booking site that answers the next question first</h2>
+                <p class="study__text">A mobile-first rental flow that cuts booking down to four clear steps.</p>
+              </div>
+              <dl class="study__meta">
+                <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+                <div><dt>Year</dt><dd>2022 - 2025</dd></div>
+                <div><dt>Scope</dt><dd>UX · UI · Web</dd></div>
+              </dl>
+              <span class="study__cta">Read case study
+                <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+
+
+        <!-- ---------- TAB: INTERACTION ----------
+             Videos live in assets/interaction. In the grid they stay paused on their first frame
+             with a play button; clicking opens the full preview, where they play with controls.
+             EDIT: to add one, copy a <figure> and change the video src (keep the #t=0.1) and caption.
+             Cards are 4:3 — the video fills the frame (edges may be trimmed slightly).
+        -->
+        <div class="tab-panel" id="interaction" role="tabpanel" data-lightbox hidden>
+          <div class="shots shots--3">
+            <figure class="shot reveal" data-ratio="528 / 368">
+              <div class="shot__media shot__media--video"><video src="assets/interaction/generating.mp4#t=0.1" muted loop playsinline preload="metadata" aria-label="Dotted shimmer animation shown while Magica generates a result"></video><span class="shot__play" aria-hidden="true"></span></div>
+              <figcaption><b>Generating state</b><span>Magica.AI · Shimmer while a result is created</span></figcaption>
+            </figure>
+            <figure class="shot reveal" data-ratio="1 / 1">
+              <div class="shot__media shot__media--video"><video src="assets/interaction/thinking-loader.mp4#t=0.1" muted loop playsinline preload="metadata" aria-label="Dot loader animations for the thinking state"></video><span class="shot__play" aria-hidden="true"></span></div>
+              <figcaption><b>Thinking loader</b><span>Magica.AI · Loading-dot explorations</span></figcaption>
+            </figure>
+            <figure class="shot reveal" data-ratio="1200 / 904">
+              <div class="shot__media shot__media--video"><video src="assets/interaction/transferring-files.mp4#t=0.1" muted loop playsinline preload="metadata" aria-label="File transfer panel with uploads and downloads progressing, each with its own progress bar and cancel button"></video><span class="shot__play" aria-hidden="true"></span></div>
+              <figcaption><b>Transferring files</b><span>Magica.AI · Upload &amp; download progress</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+
+        <!-- ---------- TAB: VISUAL DESIGN ----------
+             SIZE: export 1600 × 1200 px (shows as 331 × 248 px in the grid, larger in the preview).
+             EDIT: replace each placeholder with <div class="shot__media"><img src="assets/work/xxx.png" alt="" /></div>
+        -->
+        <div class="tab-panel" id="visual" role="tabpanel" data-lightbox hidden>
+          <div class="shots shots--3">
+            <figure class="shot reveal" data-ratio="9 / 16">
+              <div class="shot__media shot__media--story"><img src="assets/visual-design/1.png" alt="Instagram story moodboard with black-and-white portraits titled New Monochrome, promoting monochrome presets" /></div>
+              <figcaption><b>Monochrome presets story</b><span>Instagram · Celebrity photographer, Mumbai</span></figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media"><img src="assets/visual-design/2.png" alt="Billboard for Dwella, a home décor marketplace app, with a phone mockup and a scan-to-download QR code" /></div>
+              <figcaption><b>App launch billboard</b><span>Dwella · Home décor marketplace</span></figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media"><img src="assets/visual-design/3.png" alt="Two outdoor posters for Leafora Luxe botanical capsules, a green product poster and a grey poster with a hand holding a capsule" /></div>
+              <figcaption><b>Product poster series</b><span>Leafora Luxe · Health &amp; wellness</span></figcaption>
+            </figure>
+            <figure class="shot reveal" data-ratio="9 / 16">
+              <div class="shot__media shot__media--story"><img src="assets/visual-design/4.png" alt="Instagram story moodboard collage of portrait shoots with a torn-paper band reading Presets, moodboards and prints at the link in my bio" /></div>
+              <figcaption><b>Moodboard story</b><span>Instagram · Celebrity photographer, Mumbai</span></figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media"><img src="assets/visual-design/5.png" alt="Minimal poster with a single-line drawing of a figure holding flowers over a red circle on cream paper" /></div>
+              <figcaption><b>Line-art poster</b><span>Illustration</span></figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media"><img src="assets/visual-design/6.png" alt="Vector portrait illustration of a cricketer in a white India Test jersey adjusting his sunglasses" /></div>
+              <figcaption><b>Vector portrait</b><span>Illustration · Cricket</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+
+        <!-- ---------- TAB: PHOTOGRAPHY (coming soon) ----------
+             When your photos are ready: delete the "soon" block below, then restore the grid from the
+             comment under it and replace each placeholder with
+             <div class="shot__media"><img src="assets/photos/xxx.jpg" alt="" /></div>
+             SIZE: tall frames (shot--tall) 1200 × 1600 px · wide frames 1600 × 1200 px.
+             Also change the tab badge "Soon" back to the number of photos.
+        -->
+        <div class="tab-panel" id="photography" role="tabpanel" data-lightbox hidden>
+          <div class="soon reveal">
+            <span class="soon__icon" aria-hidden="true"></span>
+            <span class="soon__status"><i></i>Coming soon</span>
+            <h2 class="soon__title">Photographs, still developing.</h2>
+            <p class="soon__text">
+              When I’m away from Figma, I’m usually behind a camera — chasing light, streets and quiet moments.
+              A curated set is on its way.
+            </p>
+            <button class="btn btn--ghost btn--sm" data-goto-tab="visual">
+              Meanwhile, see visual design
+              <svg class="btn__arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" /></svg>
+            </button>
+          </div>
+
+          <!-- Photo grid, ready to restore:
+          <div class="shots shots--3 shots--masonry">
+            <figure class="shot shot--tall reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1200 × 1600 px</small></div>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1600 × 1200 px</small></div>
+            </figure>
+            <figure class="shot shot--tall reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1200 × 1600 px</small></div>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1600 × 1200 px</small></div>
+            </figure>
+            <figure class="shot shot--tall reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1200 × 1600 px</small></div>
+            </figure>
+            <figure class="shot reveal">
+              <div class="shot__media shot__media--placeholder"><span class="shot__icon shot__icon--camera"></span><small>Photo · 1600 × 1200 px</small></div>
+            </figure>
+          </div>
+          -->
+        </div>
+
+      </div>
+    </section>
+    <!-- ===================== SECTION: WORK TABS END ===================== -->
+
+  </main>
+
+
+  <!-- Footer / contact: shared, edit it in partials.js -->
+  <div data-include="footer"></div>
+
+  <!-- Preview window for Interaction / Visual design / Photography (opened by script.js) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Preview" hidden>
+    <button class="lightbox__close" id="lbClose" aria-label="Close preview"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></svg></button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg></button>
+    <figure class="lightbox__figure">
+      <div class="lightbox__stage" id="lbStage"></div>
+      <figcaption class="lightbox__caption"><span id="lbCaption"></span><small id="lbCount"></small></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg></button>
+  </div>
+
+  <script src="partials.js?v=1031"></script>
+  <script src="script.js?v=1031"></script>
+</body>
+</html>

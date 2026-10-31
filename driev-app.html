@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let’s driEV app case study — Kabi Prasad</title>
+  <meta name="description" content="How a campus EV scooter app replaced WhatsApp bookings with live availability, battery visibility and pre-book — a product design case study by Kabi Prasad Mallick." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=1031" />
+</head>
+<body class="glass theme-driev" data-page="case">   <!-- "glass" = frosted-glass cards across the page. Remove the class to switch it off. -->
+
+  <!--
+    ================================================================
+    HOW TO EDIT
+    - Every section is wrapped in  SECTION: NAME  START / END comments.
+    - To remove a section: delete everything between its START and END,
+      OR add its data-section name to HIDDEN_SECTIONS in script.js.
+    - Lines marked  EDIT:  need your real link / file / text.
+    ================================================================
+  -->
+
+  <!-- Header + menu: shared, edit them in partials.js -->
+  <div data-include="header"></div>
+
+
+  <!-- reading progress line under the header -->
+  <div class="read-progress" aria-hidden="true"><span id="readBar"></span></div>
+
+  <main class="cs">
+
+    <!-- ===================== SECTION: CASE HERO START ===================== -->
+    <section class="cs-hero" data-section="cs-hero">
+      <div class="container">
+        <a href="work.html" class="back-link reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          All work
+        </a>
+
+        <div class="cs-hero__grid">
+          <div>
+            <span class="eyebrow eyebrow--accent reveal">Let’s driEV · Community app · V1 and V2</span>
+            <h1 class="cs-hero__title reveal">Giving students <span class="accent">confidence</span> in every ride.</h1>
+            <p class="cs-hero__lead reveal">
+              How a campus-only EV scooter app replaced WhatsApp bookings with live availability, battery visibility
+              and a pre-book feature that came from watching what students still struggled with after launch.
+            </p>
+          </div>
+
+          <!-- Concept illustration (example values) -->
+          <div class="concept reveal" aria-hidden="true">
+            <span class="eyebrow">Concept · example values</span>
+            <div class="station">
+              <div class="station__top"><b>Your campus station</b><span class="station__free">Vehicle free</span></div>
+              <div class="station__battery"><span>Battery</span><span>78%</span></div>
+              <div class="station__bar"><span></span></div>
+              <small>Estimated range shown in km before you book</small>
+              <div class="station__actions"><span>Book now</span><span>Pre-book slot</span></div>
+            </div>
+          </div>
+        </div>
+
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>Solo Product Designer</dd></div>
+          <div><dt>Scope</dt><dd>Research, UX and UI across V1 and V2</dd></div>
+          <div><dt>Platform</dt><dd>Native mobile app, Android and iOS</dd></div>
+          <div><dt>Users</dt><dd>University students, teachers and staff</dd></div>
+          <div><dt>Tools</dt><dd>Figma, FigJam, Photoshop, Illustrator</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- EDIT: cover image — replace assets/driev-app.png with a wider cover if you have one (16:9 works best) -->
+    <section class="cs-block cs-block--tight" data-section="cs-cover">
+      <div class="container">
+        <div class="cs-cover reveal"><img src="assets/driEV-app/driev-app.png" alt="Let’s driEV community app screens" /></div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CASE HERO END ===================== -->
+
+
+    <!-- ===================== SECTION: CONTEXT START ===================== -->
+    <section class="cs-block" data-section="cs-context">
+      <div class="container">
+        <span class="eyebrow reveal">Product context</span>
+        <h2 class="section__title section__title--with-sub reveal">One company, two business models</h2>
+        <p class="section__sub reveal">driEV rents EV scooters in Bhubaneswar and has since expanded to Bengaluru. It runs two separate models, each with its own product, pricing and rules. This case study covers the Community model — the Rental model is covered in the <a href="driev-web.html" class="text-link">website case study</a>.</p>
+
+        <div class="model-table reveal">
+          <div class="model-table__row model-table__head"><span></span><span>Community model · this case study</span><span>Rental model · website</span></div>
+          <div class="model-table__row"><span>Who can use it</span><span>University students, teachers and staff</span><span>Open to anyone</span></div>
+          <div class="model-table__row"><span>Product</span><span>Native mobile app</span><span>Website, desktop and mobile</span></div>
+          <div class="model-table__row"><span>Pricing</span><span>Per minute plus per kilometre. No long plans.</span><span>Fixed price per plan: daily, weekly, monthly or yearly</span></div>
+          <div class="model-table__row"><span>Booking</span><span>Time-slot based, not 24-hour. Pre-book with a small token.</span><span>Pick a plan, a date, then pick-up or delivery</span></div>
+          <div class="model-table__row"><span>Pickup &amp; return</span><span>A station hub on each campus. Students book from their own college’s station and return it there.</span><span>Pickup from a warehouse, or home delivery</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CONTEXT END ===================== -->
+
+
+    <!-- ===================== SECTION: PROBLEM START ===================== -->
+    <section class="cs-block" data-section="cs-problem">
+      <div class="container cs-split">
+        <div>
+          <span class="eyebrow reveal">The problem</span>
+          <h2 class="section__title reveal">Booking a scooter meant waiting for a WhatsApp reply</h2>
+          <p class="cs-prose reveal">Before the app, students booked by messaging the company’s WhatsApp Business account and waiting for a manual answer. It cost the business revenue and trust.</p>
+        </div>
+        <ul class="rows rows--plain reveal">
+          <li>Slow responses and missed messages</li>
+          <li>No real-time information on which vehicles were available</li>
+          <li>No battery information, so students sometimes arrived to a low-charge vehicle</li>
+          <li>Lost revenue and low trust in the service</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ===================== SECTION: PROBLEM END ===================== -->
+
+
+    <!-- ===================== SECTION: RESEARCH START ===================== -->
+    <section class="cs-block" data-section="cs-research">
+      <div class="container">
+        <span class="eyebrow reveal">Research</span>
+        <h2 class="section__title section__title--with-sub reveal">Students were uncertain, not reluctant</h2>
+        <p class="section__sub reveal">I visited stations, watched how students approached the vehicles, interviewed the operations team and students, and read through the WhatsApp message logs.</p>
+
+        <div class="cards-3">
+          <div class="flow__step reveal"><b>Availability was invisible</b><p>The most common question students asked was whether any vehicle was free.</p></div>
+          <div class="flow__step reveal"><b>Battery was a surprise</b><p>Vehicles often had only 20 to 30 percent charge when students arrived.</p></div>
+          <div class="flow__step reveal"><b>Peak-hour chaos</b><p>Demand spiked at 8–10 AM and 4–6 PM, with no way to plan ahead.</p></div>
+          <div class="flow__step wide reveal"><b>No confirmation, no trust</b><p>A WhatsApp confirmation felt unofficial.</p></div>
+        </div>
+
+        <p class="callout reveal"><span>How might we</span> give students confidence about availability and battery, so they never message or travel to an empty station?</p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: RESEARCH END ===================== -->
+
+
+    <!-- ===================== SECTION: USER FLOW START ===================== -->
+    <section class="cs-block" data-section="cs-flow">
+      <div class="container">
+        <span class="eyebrow reveal">User flow</span>
+        <h2 class="section__title reveal">From campus login to receipt</h2>
+
+        <ol class="flow">
+          <li class="flow__step reveal"><span>01</span><b>Login</b><p>Sign in with a campus ID, which locks access to your own station.</p></li>
+          <li class="flow__step reveal"><span>02</span><b>Browse</b><p>See vehicles at your station with live battery and range.</p></li>
+          <li class="flow__step reveal"><span>03</span><b>Book or pre-book</b><p>Book now, or hold a future slot with a small token.</p></li>
+          <li class="flow__step reveal"><span>04</span><b>Ride</b><p>Take the vehicle from the station and ride.</p></li>
+          <li class="flow__step reveal"><span>05</span><b>End ride</b><p>Return the vehicle to the same college station.</p></li>
+          <li class="flow__step reveal"><span>06</span><b>Receipt</b><p>See time, distance and cost for the ride.</p></li>
+        </ol>
+      </div>
+    </section>
+    <!-- ===================== SECTION: USER FLOW END ===================== -->
+
+
+    <!-- ===================== SECTION: RELEASES START ===================== -->
+    <section class="cs-block" data-section="cs-releases">
+      <div class="container">
+        <span class="eyebrow reveal">Two releases</span>
+        <h2 class="section__title reveal">V1 fixed booking. V2 fixed availability.</h2>
+
+        <div class="compare">
+          <div class="compare__card reveal">
+            <span class="eyebrow">Version 1 · Core booking loop</span>
+            <h3 class="panel__title">Log in, see your station, book, ride</h3>
+            <p class="panel__text">Students log in with a campus ID, see vehicles at their station with live battery percentage and estimated range, select one, book, ride, end the ride and see a receipt.</p>
+            <p class="panel__text"><b class="t-strong">What we learned after launch.</b> Students still complained that every vehicle was already taken when they opened the app. Booking was fixed. Availability was not.</p>
+          </div>
+          <div class="compare__card compare__card--new reveal">
+            <span class="eyebrow">Version 2 · Pre-book</span>
+            <h3 class="panel__title">Hold a future slot, pay a small token</h3>
+            <p class="panel__text panel__text--on">Students reserve a vehicle for a future slot by paying a small token, based on the time window. The token becomes part of the ride cost, and the booking converts automatically when the slot opens.</p>
+            <p class="panel__text panel__text--on"><b>Edge cases designed.</b> No vehicle becoming available, and double pre-booking — with automatic refunds and rebooking prompts.</p>
+          </div>
+        </div>
+
+        <p class="callout reveal"><span>The brief never asked for pre-book.</span> It came from watching what students still struggled with after V1 shipped.</p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: RELEASES END ===================== -->
+
+
+    <!-- ===================== SECTION: DECISIONS START ===================== -->
+    <section class="cs-block" data-section="cs-decisions">
+      <div class="container cs-split">
+        <div>
+          <span class="eyebrow reveal">Key design decisions</span>
+          <h2 class="section__title reveal">Five decisions that built trust</h2>
+        </div>
+        <ul class="decisions reveal">
+          <li><span class="vtag vtag--v1">V1</span><div><b>Live battery and estimated range</b><p>On every vehicle card, so low charge is never a surprise.</p></div></li>
+          <li><span class="vtag">Core</span><div><b>Campus-locked station access</b><p>A campus ID limits each student to their own college’s station.</p></div></li>
+          <li><span class="vtag vtag--v2">V2</span><div><b>Pre-book with a token payment</b><p>The flagship feature. Peak-hour demand becomes a planned booking.</p></div></li>
+          <li><span class="vtag vtag--v2">V2</span><div><b>Smart availability notifications</b><p>Students get told when a vehicle frees up instead of refreshing the app.</p></div></li>
+          <li><span class="vtag">Core</span><div><b>Ride history and spend breakdown</b><p>Costs are split by minutes and kilometres, matching the pricing model.</p></div></li>
+        </ul>
+      </div>
+    </section>
+    <!-- ===================== SECTION: DECISIONS END ===================== -->
+
+
+    <!-- ===================== SECTION: SCREENS START =====================
+         Flow diagram: 1920 × 1080 px (assets/driEV-app/driev-app-userflow.png)
+         App screens: one set of 12, 412 × 917 px (exported @2x = 824 × 1834) in assets/driEV-app/screens/01–12.png
+         EDIT: to swap a screen, replace its file with the same name.
+    -->
+    <section class="cs-block" data-section="cs-screens">
+      <div class="container">
+        <span class="eyebrow reveal">Screens</span>
+        <h2 class="section__title reveal">The app, from first ride to pre-book</h2>
+
+        <h3 class="cs-subhead reveal">User flow diagram</h3>
+        <div class="screens screens--diagram">
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/driev-app-userflow.png" alt="Let’s driEV app user flow: login, browse, book or pre-book, ride, end ride and receipt" /></div></figure>
+        </div>
+
+        <h3 class="cs-subhead reveal">App screens</h3>
+        <div class="screens screens--mobile screens--app">
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/01.png" alt="Welcome screen with a scooter and a sign in or sign up button" loading="lazy" /></div><figcaption><b>Welcome</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/02.png" alt="Map with the campus station, a distance slider and vehicle categories" loading="lazy" /></div><figcaption><b>Plan the ride</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/03.png" alt="Vehicles at the IIT Bhubaneswar station with live range, speed and pricing" loading="lazy" /></div><figcaption><b>Station vehicles</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/04.png" alt="Vehicle details and fare breakdown with scan-to-unlock and reserve options" loading="lazy" /></div><figcaption><b>Reserve or unlock</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/05.png" alt="Bottom sheet to block the vehicle for 5, 10 or 15 minutes" loading="lazy" /></div><figcaption><b>Pick a time slot</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/06.png" alt="Countdown to ride time with options to extend the reservation" loading="lazy" /></div><figcaption><b>Reserved ride</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/07.png" alt="QR scanner to unlock the scooter, with a manual bike-number fallback" loading="lazy" /></div><figcaption><b>Scan to unlock</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/08.png" alt="Confirmation that the ride is unlocked, with a button to go to controls" loading="lazy" /></div><figcaption><b>Ride unlocked</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/09.png" alt="Profile with CO2 saved, distance travelled, rewards and menu" loading="lazy" /></div><figcaption><b>Profile &amp; rewards</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/10.png" alt="List of past rides with fare, ride type, distance and time" loading="lazy" /></div><figcaption><b>Ride history</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/11.png" alt="Empty ride history state with a Book Now button" loading="lazy" /></div><figcaption><b>Empty history</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/driEV-app/screens/12.png" alt="Insufficient wallet balance message with a Top Up Now button" loading="lazy" /></div><figcaption><b>Low wallet balance</b></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: SCREENS END ===================== -->
+
+
+    <!-- ===================== SECTION: OUTCOME START ===================== -->
+    <section class="cs-block" data-section="cs-outcome">
+      <div class="container">
+        <span class="eyebrow reveal">Outcome</span>
+        <h2 class="section__title section__title--with-sub reveal">WhatsApp was removed from community bookings</h2>
+        <p class="section__sub reveal">The app didn’t have analytics in place while I worked on it, so I’m sharing what changed rather than estimates.</p>
+
+        <div class="compare compare--single">
+          <div class="compare__card compare__card--new reveal">
+            <span class="eyebrow">What changed</span>
+            <ul>
+              <li>WhatsApp booking was eliminated for community bookings, with no manual handling by the operations team</li>
+              <li>Live battery and range answered students’ main concern before a trip</li>
+              <li>Pre-book turned peak-hour lost demand into booked revenue</li>
+              <li>Every ride is now logged with time, distance, cost and user, giving the business operational data it lacked</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: OUTCOME END ===================== -->
+
+
+    <!-- ===================== SECTION: LEARNINGS START ===================== -->
+    <section class="cs-block" data-section="cs-learned">
+      <div class="container">
+        <span class="eyebrow eyebrow--accent reveal">What I learned</span>
+        <p class="closing closing--first reveal">The real problem is often different from the obvious one.</p>
+        <p class="section__sub reveal">The brief was a booking app. The feature that mattered most — pre-book — only appeared after real students used V1. Shipping early and listening carefully beat designing the perfect version up front.</p>
+
+        <!-- Next case study -->
+        <a href="driev-web.html" class="next-case reveal">
+          <span class="eyebrow">Next case study</span>
+          <span class="next-case__title">Let’s driEV Website — A booking site that answers the next question first</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </section>
+    <!-- ===================== SECTION: LEARNINGS END ===================== -->
+
+  </main>
+
+
+  <!-- Footer / contact: shared, edit it in partials.js -->
+  <div data-include="footer"></div>
+
+  <script src="partials.js?v=1031"></script>
+  <script src="script.js?v=1031"></script>
+</body>
+</html>

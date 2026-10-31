@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magica.AI case study — Kabi Prasad</title>
+  <meta name="description" content="How Magica, a multi-model AI product, moved from a model-driven interface to a conversation-first experience — a product design case study by Kabi Prasad Mallick." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=1031" />
+</head>
+<body class="glass" data-page="case">   <!-- "glass" = frosted-glass cards across the page. Remove the class to switch it off. -->
+
+  <!--
+    ================================================================
+    HOW TO EDIT
+    - Every section is wrapped in  SECTION: NAME  START / END comments.
+    - To remove a section: delete everything between its START and END,
+      OR add its data-section name to HIDDEN_SECTIONS in script.js.
+    - Lines marked  EDIT:  need your real link / file / text.
+    ================================================================
+  -->
+
+  <!-- Header + menu: shared, edit them in partials.js -->
+  <div data-include="header"></div>
+
+
+  <!-- reading progress line under the header -->
+  <div class="read-progress" aria-hidden="true"><span id="readBar"></span></div>
+
+  <main class="cs">
+
+    <!-- ===================== SECTION: CASE HERO START ===================== -->
+    <section class="cs-hero" data-section="cs-hero">
+      <div class="container">
+        <a href="work.html" class="back-link reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          All work
+        </a>
+
+        <div class="cs-hero__grid">
+          <div>
+            <span class="eyebrow reveal">Magica.AI · Product design case study</span>
+            <h1 class="cs-hero__title reveal">Simplifying an AI&#8209;native product into a conversation.</h1>
+            <p class="cs-hero__lead reveal">
+              How a multi-model AI product moved from a complex, model-driven interface to a
+              conversation-first experience — and how a scalable, mobile-first design system grew out of that shift.
+            </p>
+            <span class="status reveal"><i></i>Ongoing · v1 shipped on web &amp; mobile, now building the design system and web app</span>
+          </div>
+
+          <!-- Concept illustration: config steps fade away, the prompt is all that's left -->
+          <div class="concept reveal" aria-hidden="true">
+            <span class="eyebrow">Concept</span>
+            <div class="concept__old">
+              <span>Choose a model</span><span>Set filters</span><span>Adjust controls</span>
+            </div>
+            <div class="concept__input">
+              <p><span class="concept__typed" data-text="Describe what you want to create"></span><b class="concept__caret"></b></p>
+              <div class="concept__row">
+                <small>Picked for you</small>
+                <span class="concept__pick">Text</span><span class="concept__pick">Code</span><span class="concept__pick">Image</span><span class="concept__pick">Video</span>
+                <span class="concept__send"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Scope</dt><dd>End-to-end: UX, UI, flows</dd></div>
+          <div><dt>Platforms</dt><dd>Web &amp; mobile apps</dd></div>
+          <div><dt>Design system</dt><dd>Mobile-first, scalable</dd></div>
+          <div><dt>Team</dt><dd>CEO, product team, developers, design intern</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- EDIT: cover image — replace assets/magica.png with a wider cover if you have one (16:9 works best) -->
+    <section class="cs-block cs-block--tight" data-section="cs-cover">
+      <div class="container">
+        <div class="cs-cover reveal"><img src="assets/Magica/Magica-thumbnail.png" alt="Magica.AI web and mobile screens" /></div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CASE HERO END ===================== -->
+
+
+    <!-- ===================== SECTION: CONTEXT START ===================== -->
+    <section class="cs-block" data-section="cs-context">
+      <div class="container">
+        <div class="cs-split">
+          <div>
+            <span class="eyebrow reveal">Product context</span>
+            <h2 class="section__title reveal">One product for many kinds of AI work</h2>
+          </div>
+          <div class="cs-prose reveal">
+            <p>Magica is an AI-native creation and productivity platform. People use it for quick everyday requests and for longer workflows like text, code, image and video generation, and other AI-powered tasks.</p>
+            <p>It sits in the same space as ChatGPT, Claude, Gemini and Manus, but brings many AI capabilities into one experience. My job is to make it easier to understand, easier to use and consistent across web and mobile.</p>
+            <p>When I joined, the experience was model-driven: users had to decide on models, filters and controls before reaching the actual task, while the product kept changing through ongoing discussions between the CEO, Product and the development team.</p>
+          </div>
+        </div>
+
+        <div class="cs-question reveal">
+          <span class="eyebrow">Core design question</span>
+          <p>How can we reduce unnecessary decisions and make a multi-model AI product feel as simple as sending a message?</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CONTEXT END ===================== -->
+
+
+    <!-- ===================== SECTION: ROLE + CONSTRAINTS START ===================== -->
+    <section class="cs-block" data-section="cs-role">
+      <div class="container cs-two">
+        <article class="panel reveal">
+          <span class="eyebrow">My role &amp; ownership</span>
+          <h3 class="panel__title">Primary designer across the product lifecycle</h3>
+          <p class="panel__text">I started on my own, then mentored a design intern who joined the team. I turn product and engineering requirements into flows and interface decisions — I redesigned the web experience, designed and shipped the first mobile app, and I’m now building the design system and the new web app.</p>
+          <ul class="rows">
+            <li>Product UX<span class="badge">High</span></li>
+            <li>User flows<span class="badge">High</span></li>
+            <li>UI design<span class="badge">High</span></li>
+            <li>Design system<span class="badge">High</span></li>
+            <li>Prototyping &amp; interaction<span class="badge">High</span></li>
+            <li>Developer collaboration<span class="badge">High</span></li>
+            <li>Team direction<span class="badge badge--outline">Growing · mentoring a design intern</span></li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <span class="eyebrow">Constraints &amp; reality</span>
+          <h3 class="panel__title">Designing without a reliable dataset</h3>
+          <p class="panel__text">Magica’s users are mostly international, and there was no analytics or research data showing where people dropped off, converted or switched flows. So I worked from product reasoning, UX principles, competitor conventions, implementation feedback and steady iteration — without treating assumptions as facts.</p>
+          <ul class="rows rows--plain">
+            <li>Limited access to product analytics</li>
+            <li>No dedicated UX research dataset</li>
+            <li>Rapidly evolving requirements</li>
+            <li>CEO-led decisions, followed by design execution</li>
+            <li>Web and mobile both had to be supported</li>
+            <li>Make it usable fast, then improve step by step</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <!-- ===================== SECTION: ROLE + CONSTRAINTS END ===================== -->
+
+
+    <!-- ===================== SECTION: THE SHIFT START ===================== -->
+    <section class="cs-block" data-section="cs-shift">
+      <div class="container">
+        <span class="eyebrow reveal">From configuration-heavy to conversational</span>
+        <h2 class="section__title reveal">Users were asked to understand complexity the product could handle</h2>
+
+        <div class="compare">
+          <div class="compare__card reveal">
+            <span class="eyebrow">Earlier direction</span>
+            <ol>
+              <li>Choose a model</li>
+              <li>Work through filters and configuration</li>
+              <li>Then begin the task</li>
+            </ol>
+          </div>
+          <div class="compare__card compare__card--new reveal">
+            <span class="eyebrow">Evolved direction</span>
+            <ol>
+              <li>Start with the task</li>
+              <li>Send a prompt</li>
+              <li>The product picks the model or capability</li>
+              <li>Generate the result</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="diff reveal">
+          <div class="diff__row"><span>Users make more decisions before starting.</span><span>Users start by describing what they need.</span></div>
+          <div class="diff__row"><span>Model selection is prominent.</span><span>Model and capability selection becomes contextual.</span></div>
+          <div class="diff__row"><span>Many filters and controls add cognitive load.</span><span>Visible complexity is reduced where it isn’t needed.</span></div>
+          <div class="diff__row"><span>The interface reflects technical complexity.</span><span>The interface focuses on the user’s goal.</span></div>
+          <div class="diff__row"><span>Each screen evolves on its own.</span><span>Reusable patterns create consistency.</span></div>
+        </div>
+
+        <p class="callout reveal"><span>Design principle.</span> Move complexity away from the user wherever the system can make the decision for them.</p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: THE SHIFT END ===================== -->
+
+
+    <!-- ===================== SECTION: EVOLUTION START ===================== -->
+    <section class="cs-block" data-section="cs-evolution">
+      <div class="container">
+        <span class="eyebrow reveal">Product evolution</span>
+        <h2 class="section__title section__title--with-sub reveal">Five stages, not one redesign</h2>
+        <p class="section__sub reveal">Magica didn’t jump from an old design to a final one. The experience changed through several iterations, and the design focus changed with it.</p>
+
+        <ol class="stages">
+          <li class="stage reveal">
+            <span class="stage__no">Stage 1 <em>Shipped</em></span>
+            <h3>Initial experience</h3>
+            <p>Model selection, filters and several controls before starting.</p>
+            <small>Focus: understand the structure and make it usable.</small>
+          </li>
+          <li class="stage reveal">
+            <span class="stage__no">Stage 2 <em>Shipped</em></span>
+            <h3>Simplification</h3>
+            <p>More product logic moved behind a conversational entry point.</p>
+            <small>Focus: reduce cognitive load and unnecessary decisions.</small>
+          </li>
+          <li class="stage reveal">
+            <span class="stage__no">Stage 3 <em>Shipped</em></span>
+            <h3>Iterative UI updates</h3>
+            <p>Screens and flows kept changing as the product evolved.</p>
+            <small>Focus: redesign and improve each affected area.</small>
+          </li>
+          <li class="stage reveal">
+            <span class="stage__no">Stage 4 <em>Shipped</em></span>
+            <h3>v1 on web &amp; mobile</h3>
+            <p>Major screens and flows became usable across the product.</p>
+            <small>Focus: consistency, and preparing for scale.</small>
+          </li>
+          <li class="stage stage--now reveal">
+            <span class="stage__no">Stage 5 <em>In progress</em></span>
+            <h3>Design system &amp; new web app</h3>
+            <p>Reusable, mobile-first components and patterns — and the web app built on them.</p>
+            <small>Focus: a foundation for future product development.</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- ===================== SECTION: EVOLUTION END ===================== -->
+
+
+    <!-- ===================== SECTION: CORE FLOW START ===================== -->
+    <section class="cs-block" data-section="cs-flow">
+      <div class="container">
+        <span class="eyebrow reveal">Core experience flow</span>
+        <h2 class="section__title section__title--with-sub reveal">A conversation, not a configuration screen</h2>
+        <p class="section__sub reveal">One conversational entry point that still supports every generation capability. Users reach a useful result without understanding the model architecture underneath.</p>
+
+        <ol class="flow">
+          <li class="flow__step reveal"><span>01</span><b>Start</b><p>The user opens the product and begins with a task.</p></li>
+          <li class="flow__step reveal"><span>02</span><b>Prompt</b><p>They describe what they want in natural language.</p></li>
+          <li class="flow__step reveal"><span>03</span><b>Interpret</b><p>The product picks the right capability or model.</p></li>
+          <li class="flow__step reveal"><span>04</span><b>Generate</b><p>Text, code, image, video or another output is produced.</p></li>
+          <li class="flow__step reveal"><span>05</span><b>Review</b><p>The user checks the result and keeps refining it in the conversation.</p></li>
+          <li class="flow__step reveal"><span>06</span><b>Complete</b><p>They save, continue, export or start another task.</p></li>
+        </ol>
+      </div>
+    </section>
+    <!-- ===================== SECTION: CORE FLOW END ===================== -->
+
+
+    <!-- ===================== SECTION: PROCESS START ===================== -->
+    <section class="cs-block" data-section="cs-process">
+      <div class="container cs-split">
+        <div>
+          <span class="eyebrow reveal">Design process</span>
+          <h2 class="section__title reveal">A pragmatic product&#8209;design loop</h2>
+          <p class="cs-prose reveal">Less about a perfect experience in one pass, more about shipping a usable product while continuously reducing complexity.</p>
+          <div class="loop reveal">
+            <span>Requirement</span><span>Understand current flow</span><span>Identify friction</span><span>Simplify</span><span>Design</span><span>Review with CEO &amp; engineering</span><span>Iterate</span><span>Implement</span><span class="is-key">Systematize</span>
+          </div>
+        </div>
+        <ul class="rows rows--text reveal">
+          <li><b>Understand what exists.</b> I studied navigation, controls, model-selection behaviour and the major task flows to see what worked and what added complexity.</li>
+          <li><b>Translate direction into UX.</b> Each requirement from the CEO and developers became information hierarchy, interaction patterns and visual consistency.</li>
+          <li><b>Simplify the interaction model.</b> From many configuration choices to a conversation-first start, letting the system choose the capability where it can.</li>
+          <li><b>Design, implement, review.</b> I worked with developers on web and mobile, reviewed the build and iterated on inconsistencies and usability issues.</li>
+          <li><b>Establish a system.</b> Once flows stabilised and screens multiplied, I moved from screen-by-screen design to a mobile-first design system.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ===================== SECTION: PROCESS END ===================== -->
+
+
+    <!-- ===================== SECTION: SCREENS START =====================
+         EDIT: to swap a screen, replace the file in assets/Magica/desktop (1280 × 832 px)
+         or assets/Magica/mobile (402 × 874 px) with the same name, or change the img src below.
+         Web screens: 1280 × 832 px · Mobile screens: 402 × 874 px
+    -->
+    <section class="cs-block" data-section="cs-screens">
+      <div class="container">
+        <span class="eyebrow reveal">Interface redesign</span>
+        <h2 class="section__title section__title--with-sub reveal">Not more UI. Easier to understand and faster to use.</h2>
+        <p class="section__sub reveal">I redesigned the existing web experience first, then carried the evolving product direction into mobile.</p>
+
+        <div class="principles">
+          <div class="reveal"><b>Clear entry point</b><p>The primary task is obvious the moment the product opens.</p></div>
+          <div class="reveal"><b>Progressive complexity</b><p>Advanced controls stay available without being the default path.</p></div>
+          <div class="reveal"><b>Consistent interaction</b><p>Predictable patterns across chat, generation, states and navigation.</p></div>
+          <div class="reveal"><b>Cross-platform</b><p>The same product logic on web and mobile, adapted to each platform.</p></div>
+        </div>
+
+        <h3 class="cs-subhead reveal">Web</h3>
+        <!-- Screens live in assets/Magica/desktop (1280 × 832 px) and assets/Magica/mobile (402 × 874 px) -->
+        <div class="screens screens--web">
+          <figure class="shot reveal">
+            <div class="shot__media"><img src="assets/Magica/desktop/1.jpeg" alt="Magica web chat: a single task combining an uploaded image and audio, with the account switcher open" /></div>
+            <figcaption><b>Chat &amp; generation</b><span>Image, audio and prompt in one task</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="shot__media"><img src="assets/Magica/desktop/2.jpeg" alt="Magica web project page with tasks, memory, instructions and uploaded files" /></div>
+            <figcaption><b>Projects</b><span>Tasks, memory, instructions and files</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="shot__media"><img src="assets/Magica/desktop/3.jpeg" alt="Magica web settings modal showing the profile form and account sections" /></div>
+            <figcaption><b>Settings</b><span>Profile, subscription and preferences</span></figcaption>
+          </figure>
+        </div>
+
+        <h3 class="cs-subhead reveal">Mobile</h3>
+        <div class="screens screens--mobile">
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/1.jpeg" alt="Magica mobile chat with an image and a video attached to a prompt" /></div><figcaption><b>Chat</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/2.jpeg" alt="Magica mobile composer with attachments added before sending" /></div><figcaption><b>Attachments</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/3.jpeg" alt="Magica mobile folders grid in the library" /></div><figcaption><b>Folders</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/4.jpeg" alt="Magica mobile project with instructions and uploaded files" /></div><figcaption><b>Project files</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/5.jpeg" alt="Magica mobile response showing the clarification detection step" /></div><figcaption><b>Clarifying</b></figcaption></figure>
+          <figure class="shot reveal"><div class="shot__media"><img src="assets/Magica/mobile/6.jpeg" alt="Magica mobile navigation menu with an item's options open" /></div><figcaption><b>Navigation</b></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: SCREENS END ===================== -->
+
+
+    <!-- ===================== SECTION: DESIGN SYSTEM START ===================== -->
+    <section class="cs-block" data-section="cs-system">
+      <div class="container">
+        <div class="cs-split">
+          <div>
+            <span class="eyebrow reveal">Design system <em class="tag-live">In progress</em></span>
+            <h2 class="section__title reveal">From screen&#8209;level design to a system</h2>
+          </div>
+          <div class="cs-prose reveal">
+            <p>Once the core flows were stable, I stopped designing screen by screen and started a mobile-first design system from the ground up — so new screens can be built faster and stay consistent. This is what I’m working on now, alongside the new Magica web app.</p>
+            <p>Patterns are documented around real product flows rather than abstract components, so the system can be adopted progressively as the product evolves.</p>
+          </div>
+        </div>
+
+        <div class="ds">
+          <div class="panel reveal">
+            <h3 class="panel__title">Foundations</h3>
+            <div class="tags"><span>Typography</span><span>Colour</span><span>Spacing</span><span>Radius</span><span>Layout rules</span></div>
+          </div>
+          <div class="panel reveal">
+            <h3 class="panel__title">Components</h3>
+            <div class="tags"><span>Buttons</span><span>Inputs</span><span>Navigation</span><span>Cards</span><span>Sheets</span><span>Dialogs</span><span>Tabs</span><span class="is-key">AI-specific patterns</span></div>
+          </div>
+          <div class="panel reveal">
+            <h3 class="panel__title">States</h3>
+            <div class="tags"><span>Default</span><span>Hover</span><span>Focus</span><span>Disabled</span><span>Loading</span><span>Error</span><span>Success</span></div>
+          </div>
+        </div>
+
+        <div class="why reveal">
+          <h3>Why mobile first?</h3>
+          <p>Tight space forces stronger prioritisation.</p>
+          <p>Core interaction patterns settle before they expand to larger screens.</p>
+          <p>A clear mobile base makes responsive decisions deliberate — web adapts the system instead of duplicating two design languages.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: DESIGN SYSTEM END ===================== -->
+
+
+    <!-- ===================== SECTION: AI WORKFLOW START =====================
+         EDIT: if you want, name the AI tools you used (e.g. ChatGPT, Claude, Figma AI) in the paragraph below.
+    -->
+    <section class="cs-block" data-section="cs-ai">
+      <div class="container">
+        <span class="eyebrow reveal">AI-assisted design workflow</span>
+        <h2 class="section__title section__title--with-sub reveal">AI as an accelerator, not a replacement for product judgment</h2>
+        <p class="section__sub reveal">Magica is an AI-native product, and the design process benefits from AI-assisted exploration too.</p>
+
+        <ol class="flow flow--six">
+          <li class="flow__step reveal"><span>Discover</span><p>Structure requirements, compare patterns, challenge assumptions.</p></li>
+          <li class="flow__step reveal"><span>Explore</span><p>Generate alternative UX directions, copy and interaction ideas.</p></li>
+          <li class="flow__step reveal"><span>Decide</span><p>Apply product constraints, platform behaviour and design principles.</p></li>
+          <li class="flow__step reveal"><span>Design</span><p>Build the chosen direction in Figma as reusable components.</p></li>
+          <li class="flow__step reveal"><span>Validate</span><p>Review flows with product and engineering, then iterate.</p></li>
+          <li class="flow__step reveal"><span>Implement</span><p>Carry approved designs into web and mobile.</p></li>
+        </ol>
+      </div>
+    </section>
+    <!-- ===================== SECTION: AI WORKFLOW END ===================== -->
+
+
+    <!-- ===================== SECTION: COLLABORATION START ===================== -->
+    <section class="cs-block" data-section="cs-team">
+      <div class="container">
+        <span class="eyebrow reveal">Collaboration &amp; leadership</span>
+        <h2 class="section__title reveal">A collaboration model for a fast-moving product</h2>
+
+        <div class="team reveal">
+          <div class="team__row"><b>CEO</b><p>Product vision, priorities and final calls.</p></div>
+          <div class="team__row"><b>Product team</b><p>Product management — requirements, feature scope and roadmap, turned into briefs for design and development.</p></div>
+          <div class="team__row"><b>Developers</b><p>Technical implementation, feasibility and iteration feedback.</p></div>
+          <div class="team__row team__row--me"><b>Me · Product Designer</b><p>UX and UI, flows, visual design, the design system and implementation review.</p></div>
+          <div class="team__row"><b>Design intern</b><p>Supports ongoing design work, mentored by me and built on the system foundation.</p></div>
+        </div>
+
+        <p class="callout reveal"><span>Leadership takeaway.</span> My role shifted from executing individual screens to creating the structure that lets another designer contribute consistently.</p>
+      </div>
+    </section>
+    <!-- ===================== SECTION: COLLABORATION END ===================== -->
+
+
+    <!-- ===================== SECTION: OUTCOME START ===================== -->
+    <section class="cs-block" data-section="cs-outcome">
+      <div class="container">
+        <span class="eyebrow reveal">Outcome &amp; measurement</span>
+        <h2 class="section__title section__title--with-sub reveal">A more usable, more structured product foundation</h2>
+        <p class="section__sub reveal">Magica didn’t have analytics in place while I worked on it, so I’m sharing what shipped rather than estimates — plus the metrics I’d track next.</p>
+
+        <div class="compare compare--single">
+          <div class="compare__card compare__card--new reveal">
+            <span class="eyebrow">What shipped</span>
+            <ul>
+              <li>Shipped the first version of the web and mobile apps</li>
+              <li>Redesigned and iterated the major product screens</li>
+              <li>Moved the interaction model toward conversation-first use</li>
+              <li>Made model and capability complexity less prominent in the main journey</li>
+              <li>Started a mobile-first design system, now in progress</li>
+              <li>Reusable UI patterns that made it easier to onboard a design intern</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metrics reveal">
+          <h3>How success will be measured next</h3>
+          <div class="tags">
+            <span>Time to first successful generation</span><span>Prompt-to-result completion rate</span>
+            <span>Retry &amp; abandonment rate</span><span>Feature adoption by generation type</span>
+            <span>Retention &amp; repeat generation</span><span>Design-to-development cycle time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SECTION: OUTCOME END ===================== -->
+
+
+    <!-- ===================== SECTION: LEARNINGS START ===================== -->
+    <section class="cs-block" data-section="cs-learned">
+      <div class="container">
+        <span class="eyebrow reveal">What I learned</span>
+        <h2 class="section__title reveal">AI products need a different balance of control and intelligence</h2>
+
+        <div class="learned">
+          <div class="learned__item reveal"><b>Reduce visible complexity</b><p>If the system can make a good decision automatically, users shouldn’t have to make it first. Design for the user’s goal, not the product’s internal complexity.</p></div>
+          <div class="learned__item reveal"><b>Design for evolution</b><p>Fast-moving products need systems that absorb new capabilities without redesigning every screen. In a startup, many small improvements often beat one big redesign.</p></div>
+          <div class="learned__item reveal"><b>System thinking scales</b><p>A good component and interaction system becomes more valuable as the product grows.</p></div>
+          <div class="learned__item reveal"><b>Constraints are part of design</b><p>When quantitative research is limited, being explicit about assumptions — and reviewing them continuously — is critical.</p></div>
+        </div>
+
+        <p class="closing reveal">Magica moved me from traditional product interfaces into AI-native product design and it’s helping an evolving product become easier to understand, use and scale.</p>
+
+        <!-- Next case study -->
+        <a href="driev-app.html" class="next-case reveal">
+          <span class="eyebrow">Next case study · Before Magica</span>
+          <span class="next-case__title">Let’s driEV — Giving students confidence in every ride</span>
+          <span class="next-case__text">Three years in EV mobility, where I designed an app from scratch and owned the full journey — entry, booking rules, payment and completion. That end-to-end, developer-close way of working is what I brought to Magica.</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </section>
+    <!-- ===================== SECTION: LEARNINGS END ===================== -->
+
+  </main>
+
+
+  <!-- Footer / contact: shared, edit it in partials.js -->
+  <div data-include="footer"></div>
+
+  <script src="partials.js?v=1031"></script>
+  <script src="script.js?v=1031"></script>
+</body>
+</html>
